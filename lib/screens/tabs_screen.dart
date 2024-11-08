@@ -1,5 +1,6 @@
 import 'package:cook_book_application/screens/categories_screen.dart';
 import 'package:cook_book_application/screens/favorite_screen.dart';
+import 'package:cook_book_application/widgets/main_drawer.dart';
 import 'package:flutter/material.dart';
 
 class TabsScreen extends StatefulWidget {
@@ -32,6 +33,7 @@ class _TabsScreenState extends State<TabsScreen> {
       appBar: AppBar(
         title: Text(pageTitle),
       ),
+      drawer: MainDrawer(),
       body: pageBody,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
