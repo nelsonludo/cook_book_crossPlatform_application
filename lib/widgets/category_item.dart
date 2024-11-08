@@ -1,4 +1,4 @@
-import 'package:cook_book_application/category_meals_screen.dart';
+import 'package:cook_book_application/screens/category_meals_screen.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {

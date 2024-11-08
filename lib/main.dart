@@ -1,5 +1,6 @@
-import 'package:cook_book_application/categories_screen.dart';
-import 'package:cook_book_application/category_meals_screen.dart';
+import 'package:cook_book_application/screens/categories_screen.dart';
+import 'package:cook_book_application/screens/category_meals_screen.dart';
+import 'package:cook_book_application/screens/meal_detail_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -28,7 +29,14 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontFamily: 'RobotoCondensed'))),
       home: CategoriesScreen(),
-      routes: {CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen()},
+      routes: {
+        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+      },
+      onUnknownRoute: (settings) {
+        print(settings.arguments);
+        return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
+      },
     );
   }
 }
